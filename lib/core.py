@@ -15,7 +15,7 @@ class Obfuscated:
         self.indent_level: int = 0
         self.__content: str = ""
 
-    def add_line(self, line: str, end=" # skidder\n") -> None:
+    def add_line(self, line: str, end=" #Obfuscator made by toast#3108\n") -> None:
         """Add a line to the code"""
         self.__content += ("    " * self.indent_level) + line + end
 
@@ -34,7 +34,7 @@ class Obfuscator:
         self.file = open(file_name, "r")
 
         with open(file_name, "r") as file:
-            if "# hello from dwoppah" in file.read():
+            if "#7ta9x4ebgc37ho5yrdgdncxkw9xwle1y#" in file.read():
                 self.console.print("Already obfuscated!")
                 exit(0)
 
@@ -166,7 +166,7 @@ class Obfuscator:
             "sys.setrecursionlimit(999999999)\n"
             "exec("
             f"__import__('{string_to_hex('zlib')}').decompress({compressed})"
-            ")  # hello from dwoppah"
+            ")  #7ta9x4ebgc37ho5yrdgdncxkw9xwle1y#"
         )
 
         final_size = len(final)
